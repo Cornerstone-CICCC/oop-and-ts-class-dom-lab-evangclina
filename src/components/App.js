@@ -1,6 +1,7 @@
 import { Component } from "../common/Component.js";
 import { AddTodo } from "./AddTodo.js";
 import { TodoList } from "./TodoList.js";
+import { TodoContext } from "../contexts/TodoContext.js";
 
 export class App extends Component {
   render() {
@@ -18,6 +19,7 @@ export class App extends Component {
     container.querySelector('#wrapper-add').appendChild(add)
     container.querySelector('#wrapper-todos').appendChild(todos)
 
+    // todoList.mount(container.querySelector("main"))
     return container;
   }
 }
